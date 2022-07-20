@@ -1,0 +1,30 @@
+
+$css: '.e-css'!default;
+$imported-modules: () !default;
+.e-lib {
+ @at-root {
+
+@include export-module('popup-layout') {
+  /*! popup layout */
+  .e-popup {
+    height: auto;
+    position: absolute;
+    width: auto;
+    z-index: 1000;
+  }
+
+  .e-popup.e-popup-open {
+    display: block;
+  }
+
+  .e-popup.e-popup-close {
+    display: none;
+  }
+}
+
+
+ }
+ & .e-js [class^='e-'], & .e-js [class*=' e-'] {
+     box-sizing: content-box;
+ }
+}

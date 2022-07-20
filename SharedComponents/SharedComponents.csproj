@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Ref\" />
+    <None Remove="Ref\wwwroot\background.png" />
+    <None Remove="Ref\wwwroot\exampleJsInterop.js" />
+    <None Remove="Ref\wwwroot\" />
+    <None Remove="TailWindTempLates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ref\" />
+    <Folder Include="Ref\wwwroot\" />
+    <Folder Include="TailWindTempLates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ref\wwwroot\background.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Ref\wwwroot\exampleJsInterop.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
