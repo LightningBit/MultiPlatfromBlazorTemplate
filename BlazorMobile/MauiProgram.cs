@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using BlazorMobile.Data;
 
 namespace BlazorMobile;
 
@@ -20,7 +19,6 @@ public static class MauiProgram
         builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 
-        builder.Services.AddSingleton<WeatherForecastService>();
 
         return builder.Build();
     }
