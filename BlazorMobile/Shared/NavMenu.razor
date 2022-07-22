@@ -1,60 +1,40 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="">BlazorMobile</a>
-		<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	</div>
+﻿<div class="bg-blue-500 text-white md:flex md:justify-between md:items-center">
+    <div class="flex items-center justify-between p-4">
+        <h1>Your site!</h1>
+
+        <button @onclick="ToggleMenu" class="md:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                      d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+            </svg>
+        </button>
+    </div>
+    @{
+        //This will be used to hide the menu.
+        var menuVisibleClass = _menuVisible ? "" : "hidden";
+    }
+    @*I’ve then used a little string interpolation to include that class in the CSS class definition for our ul*@
+<ul class="@($"flex flex-col {menuVisibleClass} bg-gray-700 px-4 py-2 md:flex md:flex-row md:bg-transparent")">
+    <NavLink class="" href="/">Home</NavLink>
+    <NavLink class="" href="/AdminLOgin">Admin</NavLink>
+    <NavLink class="" href="/Blog">Blog</NavLink>
+    <NavLink class="" href="/Welcome">Landing Page</NavLink>
+    <NavLink class="" href="/WelcomeHome">Another Landing Page</NavLink>
+    <NavLink class="" href="/ProductA">Product A</NavLink>
+    <NavLink class="" href="/ProductB">Product B</NavLink>
+</ul>
+
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/Welcome">
-                <span class="oi oi-plus" aria-hidden="true"></span> Landing Page
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/WelcomeHome">
-                <span class="oi oi-plus" aria-hidden="true"></span> Alternate Landing Page.
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/ProductA">
-                <span class="oi oi-plus" aria-hidden="true"></span> ProductA
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/ProductB">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> ProductB
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/AdminLogin">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Login
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/blog">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Blog
-            </NavLink>
-        </div>
-    </nav>
-</div>
+@code
+{
+    private bool _menuVisible = false;
 
-@code {
-	private bool collapseNavMenu = true;
-
-	private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-	private void ToggleNavMenu()
-	{
-		collapseNavMenu = !collapseNavMenu;
-	}
+    private void ToggleMenu()
+    {
+        _menuVisible = !_menuVisible;
+    }
 }
+
+
 
