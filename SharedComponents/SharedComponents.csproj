@@ -16,35 +16,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Ref\" />
-    <None Remove="Ref\wwwroot\background.png" />
-    <None Remove="Ref\wwwroot\exampleJsInterop.js" />
-    <None Remove="Ref\wwwroot\" />
     <None Remove="TailWindTempLates\" />
     <None Remove="TailWindTempLates\StaticTemplates\" />
     <None Remove="TailWindTempLates\tailwind-starter-kit-main\html-dashboard-page\" />
     <None Remove="TailWindTempLates\tailwind-starter-kit-main\html-landing-page\" />
     <None Remove="TailWindTempLates\tailwind-starter-kit-main\html-login-page\" />
     <None Remove="TailWindTempLates\tailwind-starter-kit-main\html-profile-page\" />
+    <None Remove="Components\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ref\" />
-    <Folder Include="Ref\wwwroot\" />
     <Folder Include="TailWindTempLates\" />
     <Folder Include="TailWindTempLates\StaticTemplates\" />
     <Folder Include="TailWindTempLates\tailwind-starter-kit-main\html-dashboard-page\" />
     <Folder Include="TailWindTempLates\tailwind-starter-kit-main\html-landing-page\" />
     <Folder Include="TailWindTempLates\tailwind-starter-kit-main\html-login-page\" />
     <Folder Include="TailWindTempLates\tailwind-starter-kit-main\html-profile-page\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Ref\wwwroot\background.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="Ref\wwwroot\exampleJsInterop.js">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Folder Include="Components\" />
   </ItemGroup>
 </Project>
