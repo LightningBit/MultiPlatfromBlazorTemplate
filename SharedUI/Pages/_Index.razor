@@ -1,15 +1,11 @@
-﻿@page "/"
+﻿@*@page "/"*@
 
-<_Index />
-
-
-
-<!--<html> 
+<html> 
 <body class="font-sans antialiased bg-gray-100 text-gray-700">
     <div x-data="{showMenu: false}" class="h-24 z-40 relative container mx-auto px-6 flex items-center justify-between text-white">
-    </div>-->
+    </div>
  @* Landing image*@
-    <!--<div x-data="slideshow()" x-init="init()" class="-mt-32 relative w-full h-screen bg-blue-100 flex items-center justify-center">
+    <div x-data="slideshow()" x-init="init()" class="-mt-32 relative w-full h-screen bg-blue-100 flex items-center justify-center">
         <div class="relative z-10 text-center text-white px-6">
             <h1 class="text-3xl md:text-5xl font-display font-semibold mt-2">Code is law</h1>
             <div class="max-w-sm mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -20,9 +16,9 @@
 
         </div>
         <img x-bind:src="images[current]" class="w-full h-full absolute inset-0 object-cover opacity-95">
-    </div>-->
+    </div>
  @* About us banner*@
-    <!--<div class="dark:bg-black mx-auto px-6 flex flex-wrap items-center py-24">
+    <div class="dark:bg-black mx-auto px-6 flex flex-wrap items-center py-24">
         <div class="w-full lg:flex-1">
             <div class="dark:text-amber-200 uppercase text-sm tracking-widest">Why LightningBits?</div>
             <h2 class="dark:text-white text-3xl md:text-4xl font-semibold font-display mt-3">C# is the future of good Code and life as we know it.</h2>
@@ -36,9 +32,9 @@
             <p class="dark:text-white">Don't be Evil, Can't be Evil</p>
             <a href="#" class="dark:bg-indigo-600 inline-block bg-black text-white text-sm tracking-widest font-heading px-8 py-4 mt-4">Learn more</a>
         </div>
-    </div>-->
+    </div>
  @* Main products Mosaic*@
-    <!--<div class="dark:bg-black p-4 grid grid-cols-1 md:grid-cols-5 grid-rows-2 gap-4">
+    <div class="dark:bg-black p-4 grid grid-cols-1 md:grid-cols-5 grid-rows-2 gap-4">
         <a href="#" class="relative block bg-black text-white md:col-span-2">
             <div class="relative z-10 p-12">
                 <h3 class="font-display text-2xl">Best Sellers</h3>
@@ -79,13 +75,13 @@
             </div>
             <img src="https://images.unsplash.com/photo-1587377838789-968194a7cc88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2358&q=80" class="absolute inset-0 w-full h-full object-cover opacity-75">
         </a>
-    </div>-->
+    </div>
  @* Blog banner*@
-    <!--<div class="dark:bg-black text-center py-12">
+    <div class="dark:bg-black text-center py-12">
         <a href="#" class="inline-block bg-indigo-500 text-white text-sm tracking-widest font-heading px-8 py-4">PLace holder for blog</a>
-    </div>-->
+    </div>
  @* Main Services *@
-    <!--<div class="dark:bg-black bg-gray-300 p-4 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-screen">
+    <div class="dark:bg-black bg-gray-300 p-4 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-screen">
         <div class="dark:bg-black dark:text-white text-gray-700 text-center md:col-span-2 flex items-center justify-center">
             <div class="relative z-10 p-12">
                 <div class="uppercase text-sm text-gray-700 tracking-widest">don't'</div>
@@ -103,9 +99,9 @@
         <div class="h-64 md:h-auto col-span-1 row-span-1 relative">
             <img src="https://images.unsplash.com/photo-1461685265823-f8d5d0b08b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="absolute inset-0 w-full h-full object-cover">
         </div>
-    </div>-->
+    </div>
  @* Testomnial Quotes*@
-    <!--<div class="dark:bg-gray-300 dark:text-black mx-auto px-6 py-12">
+    <div class="dark:bg-gray-300 dark:text-black mx-auto px-6 py-12">
         <h2 class="font-display font-semibold text-3xl">Testimonials</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 mt-12">
             <div class="relative">
@@ -172,9 +168,9 @@
                 </svg>
             </div>
         </div>
-    </div>-->
+    </div>
  @* Secondary services*@
-    <!--<div class="dark:bg-black bg-gray-300 p-4 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-screen">
+    <div class="dark:bg-black bg-gray-300 p-4 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-screen">
         <div class="h-64 md:h-auto md:col-span-2 md:row-span-2 relative">
             <img src="https://images.unsplash.com/photo-1640763502425-7668dc1e4023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="absolute inset-0 w-full h-full object-cover">
         </div>
@@ -192,13 +188,13 @@
         <div class="h-64 md:h-auto col-span-1 row-span-1 relative">
             <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" class="absolute inset-0 w-full h-full object-cover">
         </div>
-    </div>-->
+    </div>
  @*Footer*@
-    <!--<div class="text-gray-800 text-opacity-40 font-semibold text-xs tracking-widest px-12">
+    <div class="text-gray-800 text-opacity-40 font-semibold text-xs tracking-widest px-12">
     </div>
     <div class="dark:bg-gray-600 dark:text-indigo-100 text-indigo-500 text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase p-12">©2022 design by LightningBits. images by unsplash</div>
 </body>
-</html>-->
+</html>
 
 
 
