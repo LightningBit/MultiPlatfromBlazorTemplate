@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <None Remove="BlazorWeb.Shared" />
-    <None Remove="cssStyles\" />
     <None Remove="Pages\" />
     <None Remove="Shared\" />
   </ItemGroup>
@@ -28,20 +27,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="cssStyles\" />
-    <Folder Include="wwwroot\img\" />
     <Folder Include="Pages\" />
     <Folder Include="Shared\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\img\cookie.png" />
-    <Content Remove="wwwroot\img\favicon.ico" />
     <Content Remove="wwwroot\img\section1.jpeg" />
     <Content Remove="wwwroot\img\section2.jpeg" />
-    <Content Remove="wwwroot\img\team-2-800x800.jpg" />
     <Content Remove="wwwroot\img\team-3-800x800.jpg" />
-    <Content Remove="wwwroot\img\team-4-470x470.png" />
-    <Content Remove="wwwroot\img\" />
     <Content Remove="Pages\Blog.razor" />
     <Content Remove="Pages\ComponentTest.razor" />
     <Content Remove="Pages\Index.razor" />
@@ -49,23 +42,31 @@
     <Content Remove="Shared\AppBar.razor" />
     <Content Remove="Shared\MainLayout.razor" />
     <Content Remove="Shared\NavMenu.razor" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\img\cookie.png" />
-    <None Include="wwwroot\img\favicon.ico" />
-    <None Include="wwwroot\img\index2.jpeg" />
-    <None Include="wwwroot\img\index1.jpeg" />
-    <None Include="wwwroot\img\team-2-800x800.jpg" />
-    <None Include="wwwroot\img\team2.jpg" />
-    <None Include="wwwroot\img\team-4-470x470.png" />
+    <Content Remove="wwwroot\img\cookie.png" />
+    <Content Remove="wwwroot\img\favicon.ico" />
+    <Content Remove="wwwroot\img\index1.jpeg" />
+    <Content Remove="wwwroot\img\index2.jpeg" />
+    <Content Remove="wwwroot\img\team-2-800x800.jpg" />
+    <Content Remove="wwwroot\img\team-4-470x470.png" />
+    <Content Remove="wwwroot\img\team2.jpg" />
+    <Content Remove="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
     <RazorComponent Include="Pages\Blog.razor" />
-    <RazorComponent Include="Pages\ComponentTest.razor" />
+    <RazorComponent Include="Pages\ComponentPlayground.razor" />
     <RazorComponent Include="Pages\Index.razor" />
     <RazorComponent Include="Pages\Product.razor" />
     <RazorComponent Include="Shared\AppBar.razor" />
     <RazorComponent Include="Shared\MainLayout.razor" />
     <RazorComponent Include="Shared\NavMenu.razor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\img\cookie.png" />
+    <None Include="wwwroot\img\favicon.ico" />
+    <None Include="wwwroot\img\index1.jpeg" />
+    <None Include="wwwroot\img\index2.jpeg" />
+    <None Include="wwwroot\img\team-2-800x800.jpg" />
+    <None Include="wwwroot\img\team-4-470x470.png" />
+    <None Include="wwwroot\img\team2.jpg" />
   </ItemGroup>
 </Project>

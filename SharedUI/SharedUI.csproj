@@ -6,7 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
@@ -16,23 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Blog.razor" />
-    <Content Remove="Pages\ComponentTest.razor" />
-    <Content Remove="Pages\Index.razor" />
-    <Content Remove="Pages\Product.razor" />
-  </ItemGroup>
-  <ItemGroup>
-    <RazorComponent Include="Pages\Blog.razor" />
-    <RazorComponent Include="Pages\ComponentTest.razor" />
-    <RazorComponent Include="Pages\_Index.razor" />
-    <RazorComponent Include="Pages\Product.razor" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="Pages\" />
-    <None Remove="cssStyles\" />
   </ItemGroup>
+
   <ItemGroup>
     <Folder Include="Pages\" />
-    <Folder Include="cssStyles\" />
   </ItemGroup>
 </Project>

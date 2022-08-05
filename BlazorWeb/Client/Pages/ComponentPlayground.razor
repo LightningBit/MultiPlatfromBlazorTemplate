@@ -1,7 +1,9 @@
-﻿@page "/ComponentTest"
+﻿@page "/ComponentPLayGround"
+
+<_ComponentPlayground />
 
 
-<div class="w-full py-24 relative">
+<!--<div class="w-full py-24 relative">
     <div class="bg-gray-300 max-w-3xl text-center relative z-20 mx-auto py-6">
         <h3 class="text-black text-2xl mb-4">Subscribe</h3>
         <p class="text-black mb-6">Enim commodo nostrud in sunt nulla cillum tempor.</p>
@@ -35,9 +37,9 @@
             </MudCardContent>
         </MudCard>
         <button type="button" class="bg-indigo-500 ..." disabled>
-            <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+            <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">-->
                 <!-- ... -->
-            </svg>
+            <!--</svg>
             Processing...
         </button>
         <MudText Typo="Typo.h6">LightningBits is @Text</MudText>
@@ -52,11 +54,11 @@
             <MudText Typo="Typo.body2">Some logo's are good some not so good.'.</MudText>
         </MudCardContent>
     </MudCard>
-</body>
+</body>-->
 
 
 @code {
-    public string Text { get; set; } = "????";
+    @*public string Text { get; set; } = "????";
     public string ButtonText { get; set; } = "Click Me";
     public int ButtonClicked { get; set; }
 
@@ -65,5 +67,5 @@
         ButtonClicked += 1;
         Text = $"Awesome x {ButtonClicked}";
         ButtonText = "Click Me Again";
-    }
+    }*@
 }
