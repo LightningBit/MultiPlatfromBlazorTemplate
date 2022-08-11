@@ -16,9 +16,11 @@
 
   <ItemGroup>
     <None Remove="Pages\" />
+    <None Remove="cssStyles\" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="cssStyles\" />
   </ItemGroup>
 </Project>

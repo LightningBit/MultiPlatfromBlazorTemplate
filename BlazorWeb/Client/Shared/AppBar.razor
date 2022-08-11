@@ -1,53 +1,32 @@
-﻿<MudAppBar Class="pt-2" Elevation="21" Dense="true">
+﻿    <MudAppBar Class="pt-2" Elevation="21" Dense="true">
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
                    OnClick="async () => await OnSidebarToggled.InvokeAsync()" />
     <MudSpacer />
-    @if (_isLightMode)
-    {
-        <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="ToggleTheme" />
-    }
-    else
-    {
-        <MudIconButton Icon="@Icons.Material.Filled.Brightness5" Color="Color.Inherit" OnClick="ToggleTheme" />
-    }
+    <MudIconButton Icon="@Icons.Custom.Brands.Facebook" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
+                   OnClick="GoToFaceBook" />
+    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
+                   OnClick="GoToGitHub" />
+    <MudIconButton Icon="@Icons.Custom.Brands.Instagram" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
+                   OnClick="GoToInstaGram" />
+    <MudIconButton Icon="@Icons.Custom.Brands.Twitter" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
+                   OnClick="GoToTwitter" />
+    <MudTooltip Text="Create Product">
+        <MudLink Href="/createProduct">
+            <MudFab Icon="@Icons.Filled.Add" Color="Color.Dark" Size="Size.Small" />
+        </MudLink>
+    </MudTooltip>
 </MudAppBar>
 
 
-@code {
-    private bool _isLightMode = true;
-    private MudTheme _currentTheme = new MudTheme();
-
-    [Parameter]
-    public EventCallback OnSidebarToggled { get; set; }
-    [Parameter]
-    public EventCallback<MudTheme> OnThemeToggled { get; set; }
-
-    private async Task ToggleTheme()
-    {
-        _isLightMode = !_isLightMode;
-
-        _currentTheme = !_isLightMode ? GenerateDarkTheme() : new MudTheme();
-
-        await OnThemeToggled.InvokeAsync(_currentTheme);
-    }
-
-    private MudTheme GenerateDarkTheme() =>
-        new MudTheme
-        {
-            Palette = new Palette()
-            {
-                Black = "#000000",
-                @*Background = "#000000",*@
-                @*BackgroundGrey = "#27272f",*@
-                Surface = "#373740",
-                @*TextPrimary = "#ffffffb3",*@
-                @*TextSecondary = "rgba(255,255,255, 0.50)",*@
-                AppbarBackground = "#27272f",
-                AppbarText = "#FAFAFA",
-                DrawerBackground = "#27272f",
-                DrawerText = "#ffffffb3",
-                DrawerIcon = "#ffffffb3"
-            },
-        };
-
+    @code {
+        [Parameter]
+        public EventCallback OnSidebarToggled { get; set; }
+        [Parameter]
+        public EventCallback GoToFaceBook { get; set; }
+        [Parameter]
+        public EventCallback GoToGitHub { get; set; }
+        [Parameter]
+        public EventCallback GoToInstaGram { get; set; }
+        [Parameter]
+        public EventCallback GoToTwitter { get; set; }
 }
