@@ -1,32 +1,15 @@
-﻿    <MudAppBar Class="pt-2" Elevation="21" Dense="true">
+﻿<MudAppBar Class="pt-2" Elevation="21" Dense="true">
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
                    OnClick="async () => await OnSidebarToggled.InvokeAsync()" />
-    <MudSpacer />
-    <MudIconButton Icon="@Icons.Custom.Brands.Facebook" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
-                   OnClick="GoToFaceBook" />
-    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
-                   OnClick="GoToGitHub" />
-    <MudIconButton Icon="@Icons.Custom.Brands.Instagram" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
-                   OnClick="GoToInstaGram" />
-    <MudIconButton Icon="@Icons.Custom.Brands.Twitter" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"
-                   OnClick="GoToTwitter" />
-    <MudTooltip Text="Create Product">
-        <MudLink Href="/createProduct">
-            <MudFab Icon="@Icons.Filled.Add" Color="Color.Dark" Size="Size.Small" />
-        </MudLink>
-    </MudTooltip>
+                  <MudSpacer />
+    <MudIconButton Href="#" Icon="@Icons.Custom.Brands.Facebook" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"/>
+    <MudIconButton Href="#" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"/>
+    <MudIconButton Href="#" Icon="@Icons.Custom.Brands.Instagram" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"/>
+    <MudIconButton Href="#" Icon="@Icons.Custom.Brands.Twitter" Color="Color.Inherit" Size="Size.Medium" Edge="Edge.Start"/>
 </MudAppBar>
 
 
     @code {
         [Parameter]
         public EventCallback OnSidebarToggled { get; set; }
-        [Parameter]
-        public EventCallback GoToFaceBook { get; set; }
-        [Parameter]
-        public EventCallback GoToGitHub { get; set; }
-        [Parameter]
-        public EventCallback GoToInstaGram { get; set; }
-        [Parameter]
-        public EventCallback GoToTwitter { get; set; }
 }
