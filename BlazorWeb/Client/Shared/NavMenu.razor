@@ -1,7 +1,7 @@
 ﻿<MudDrawer @bind-Open="SideBarOpen" Elevation="10">
     <MudDrawerHeader>
         <MudAvatar Color="Color.Transparent" Size="Size.Large" Image="img/lb_logo.png" />
-        <MudText Typo="Typo.h5" Color="Color.Dark" Style="margin-top:15px; margin-left:5px;">LightningBits</MudText>
+        <MudText Typo="Typo.h5" Color="Color.Default" Style="margin-top:15px; margin-left:5px;">LightningBits</MudText>
     </MudDrawerHeader>
     <MudNavMenu>
         <MudNavLink Href="/" Match="NavLinkMatch.All"></MudNavLink>
@@ -13,12 +13,59 @@
         <MudDivider DividerType="DividerType.Middle" Class="my-6" />
         <MudNavLink Href="/LogIn" Icon="@Icons.Filled.Login" Match="NavLinkMatch.Prefix">Log In</MudNavLink>
         <MudDivider DividerType="DividerType.Middle" Class="my-6" />
-        <MudNavLink Href="/ComponentTest" Icon="@Icons.Filled.CodeOff" Match="NavLinkMatch.Prefix">Code Play Ground</MudNavLink>
+        <MudNavLink Href="/ComponentPLayground" Icon="@Icons.Filled.CodeOff" Match="NavLinkMatch.Prefix">C# PlayGround</MudNavLink>
     </MudNavMenu>
+
+    <MudDivider DividerType="DividerType.Middle" Class="my-6" />
+    <MudText>Settings</MudText>
+    @if (_isLightMode)
+    {
+        <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="ToggleTheme" />
+    }
+    else
+    {
+        <MudIconButton Icon="@Icons.Material.Filled.Brightness5" Color="Color.Inherit" OnClick="ToggleTheme" />
+    }
 </MudDrawer>
 
 @code {
     [Parameter]
     public bool SideBarOpen { get; set; }
+
+    private bool _isLightMode = true;
+
+    private MudTheme _currentTheme = new MudTheme();
+
+    [Parameter]
+    public EventCallback<MudTheme> OnThemeToggled { get; set; }
+
+    private async Task ToggleTheme()
+    {
+        _isLightMode = !_isLightMode;
+
+        _currentTheme = !_isLightMode ? GenerateDarkTheme() : new MudTheme();
+
+        await OnThemeToggled.InvokeAsync(_currentTheme);
+    }
+
+    private MudTheme GenerateDarkTheme() =>
+        new MudTheme
+        {
+            Palette = new Palette()
+            {
+                Black = "#000000",
+                @*Background = "#000000",*@
+                @*BackgroundGrey = "#27272f",*@
+                Surface = "#373740",
+                TextPrimary = "#ffffffb3",
+                TextSecondary = "rgba(255,255,255, 0.50)",
+                AppbarBackground = "#27272f",
+                AppbarText = "#FAFAFA",
+                DrawerBackground = "#27272f",
+                DrawerText = "#ffffffb3",
+                DrawerIcon = "#ffffffb3"
+            },
+        };
+
 }
 
