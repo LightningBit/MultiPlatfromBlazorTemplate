@@ -6,19 +6,22 @@
 
 
 <MudLayout Color="Color.Dark">
-    <AppBar OnSidebarToggled="ToggleSidebar" />
-    <NavMenu SideBarOpen="_sidebarOpen"  OnThemeToggled="ToggleTheme" />
+    <AppBar OnSidebarToggled="ToggleSidebar" OnThemeToggled="ToggleTheme" />
+    <NavMenu SideBarOpen="_sidebarOpen" />
+    @*<AppBar OnSidebarToggled="ToggleSidebar" />
+    <NavMenu SideBarOpen="_sidebarOpen" OnThemeToggled="ToggleTheme" />*@
     <MudScrollToTop>
         <MudFab Color="Color.Primary" Icon="@Icons.Filled.ArrowCircleUp" />
     </MudScrollToTop>
+
     <MudMainContent Class="pt-n4">
         @Body
     </MudMainContent>
 </MudLayout>
 
 
-@code {
 
+@code {
     private MudTheme _currentTheme = new MudTheme();
 
     private bool _sidebarOpen = false;
@@ -26,5 +29,6 @@
     private void ToggleTheme(MudTheme changedTheme) => _currentTheme = changedTheme;
 
     private void ToggleSidebar() => _sidebarOpen = !_sidebarOpen;
-}
 
+
+}

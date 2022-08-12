@@ -48,11 +48,9 @@
 
     <ItemGroup>
       <None Remove="Pages\" />
-      <None Remove="cssStyles\" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Pages\" />
-      <Folder Include="cssStyles\" />
       <Folder Include="wwwroot\img\" />
       <Folder Include="wwwroot\img\" />
     </ItemGroup>
