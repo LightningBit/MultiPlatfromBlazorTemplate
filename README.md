@@ -1,14 +1,8 @@
-# MultiPlatfromBlazorTemplate
-Multi Platform dotnet app with sharable UI. Target IOS, Android&lt; and WEB, Just getting started will be ready soon,
-Not for production
-
-
-Install MudBlazor
-https://mudblazor.com/getting-started/installation#ready-for-more?
-
-
-
-Install Tailwind
-https://chrissainty.com/adding-tailwind-css-v3-to-a-blazor-app/
-Hot Reload CSS from terminal 
-npx tailwindcss -i ./cssStyles/app.css -o ./wwwroot/app.css --watch
+# MultiPlatfromBlazorTemplate.
+Multi Platform dotnet quick start template Featuring a sharable Razor Library based UI.
+This app Targets All Desktop Web Browsers, IOS, MacCatalyst, Android, Tzin, and Windows.
+Technologies used .netcore server, webassembly, and Maui blazor Hybrid.
+Using MuddBlazor https://mudblazor.com/
+Using TailwindCSS https://tailwindcss.com/
+Using B
+This app has Not tested for production.
