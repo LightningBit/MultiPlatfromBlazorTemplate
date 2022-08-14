@@ -40,6 +40,8 @@
 
         <!-- Images -->
         <MauiImage Include="Resources\Images\*" />
+        <MauiImage Include="Resources\Images\lb_logo.svg" />
+
         <MauiFont Include="Resources\Fonts\*" />
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
@@ -51,18 +53,9 @@
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Pages\" />
-      <Folder Include="wwwroot\img\" />
-      <Folder Include="wwwroot\img\" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="MudBlazor" Version="6.0.14" />
-    </ItemGroup>
-    <ItemGroup>
-      <Content Remove="wwwroot\img\" />
-      <Content Remove="wwwroot\img\cookie.png" />
-      <Content Remove="wwwroot\img\favicon.ico" />
-      <Content Remove="wwwroot\img\index1.jpeg" />
-      <Content Remove="wwwroot\img\index2.jpeg" />
     </ItemGroup>
     <ItemGroup>
       <RazorComponent Remove="Pages\About.razor" />
@@ -91,11 +84,5 @@
     <ItemGroup>
       <ProjectReference Include="..\SharedUI\SharedUI.csproj" />
       <ProjectReference Include="..\BlazorWeb\Shared\BlazorWeb.Shared.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Include="wwwroot\img\cookie.png" />
-      <None Include="wwwroot\img\favicon.ico" />
-      <None Include="wwwroot\img\index1.jpeg" />
-      <None Include="wwwroot\img\index2.jpeg" />
     </ItemGroup>
 </Project>
