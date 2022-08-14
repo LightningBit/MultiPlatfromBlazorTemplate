@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:BlazorMaui"
              x:Class="BlazorMaui.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
+             
 
     <BlazorWebView HostPage="wwwroot/index.html">
         <BlazorWebView.RootComponents>

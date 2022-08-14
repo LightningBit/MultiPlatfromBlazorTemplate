@@ -58,25 +58,11 @@
       <PackageReference Include="MudBlazor" Version="6.0.14" />
     </ItemGroup>
     <ItemGroup>
+      <Content Remove="wwwroot\img\" />
       <Content Remove="wwwroot\img\cookie.png" />
       <Content Remove="wwwroot\img\favicon.ico" />
       <Content Remove="wwwroot\img\index1.jpeg" />
       <Content Remove="wwwroot\img\index2.jpeg" />
-      <Content Remove="wwwroot\img\team-2-800x800.jpg" />
-      <Content Remove="wwwroot\img\team-3-800x800.jpg" />
-      <Content Remove="wwwroot\img\team-4-470x470.png" />
-      <Content Remove="wwwroot\img\" />
-      <Content Remove="wwwroot\img\team2.jpg" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Include="wwwroot\img\cookie.png" />
-      <None Include="wwwroot\img\favicon.ico" />
-      <None Include="wwwroot\img\index1.jpeg" />
-      <None Include="wwwroot\img\index2.jpeg" />
-      <None Include="wwwroot\img\team-2-800x800.jpg" />
-      <None Include="wwwroot\img\team-3-800x800.jpg" />
-      <None Include="wwwroot\img\team-4-470x470.png" />
-      <None Include="wwwroot\img\team2.jpg" />
     </ItemGroup>
     <ItemGroup>
       <RazorComponent Remove="Pages\About.razor" />
@@ -105,5 +91,11 @@
     <ItemGroup>
       <ProjectReference Include="..\SharedUI\SharedUI.csproj" />
       <ProjectReference Include="..\BlazorWeb\Shared\BlazorWeb.Shared.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="wwwroot\img\cookie.png" />
+      <None Include="wwwroot\img\favicon.ico" />
+      <None Include="wwwroot\img\index1.jpeg" />
+      <None Include="wwwroot\img\index2.jpeg" />
     </ItemGroup>
 </Project>

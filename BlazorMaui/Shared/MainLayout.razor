@@ -6,14 +6,11 @@
 
 
 <MudLayout Color="Color.Dark">
-    <AppBar OnSidebarToggled="ToggleSidebar" OnThemeToggled="ToggleTheme" />
+    <AppBar OnSidebarToggled="ToggleSidebar" />
     <NavMenu SideBarOpen="_sidebarOpen" />
-    @*<AppBar OnSidebarToggled="ToggleSidebar" />
-    <NavMenu SideBarOpen="_sidebarOpen" OnThemeToggled="ToggleTheme" />*@
     <MudScrollToTop>
         <MudFab Color="Color.Primary" Icon="@Icons.Filled.ArrowCircleUp" />
     </MudScrollToTop>
-
     <MudMainContent Class="pt-n4">
         @Body
     </MudMainContent>
@@ -22,13 +19,23 @@
 
 
 @code {
-    private MudTheme _currentTheme = new MudTheme();
-
-    private bool _sidebarOpen = false;
-
-    private void ToggleTheme(MudTheme changedTheme) => _currentTheme = changedTheme;
-
-    private void ToggleSidebar() => _sidebarOpen = !_sidebarOpen;
-
-
+        private bool _sidebarOpen = false;
+        private void ToggleSidebar() => _sidebarOpen = !_sidebarOpen;
+        private MudTheme _currentTheme = new MudTheme()
+                {
+                    Palette = new Palette()
+                    {
+                        Black = "#000000",
+                        @*Background = "#000000",*@
+                        @*BackgroundGrey = "#27272f",*@
+                        Surface = "#373740",
+                        TextPrimary = "#ffffffb3",
+                        TextSecondary = "rgba(255,255,255, 0.50)",
+                        AppbarBackground = "#27272f",
+                        AppbarText = "#FAFAFA",
+                        DrawerBackground = "#27272f",
+                        DrawerText = "#ffffffb3",
+                        DrawerIcon = "#ffffffb3"
+                    },
+                };
 }
