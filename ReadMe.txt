@@ -1,7 +1,7 @@
 ﻿
-To edit project in Hot reload run the dotnet watch from the client and npx watch shared UI.
+To edit this project with Hot reload active in terminal run dotnet watch from BlazorWebclient and npx watch from SharedUI.
 from SharedUI: npx tailwindcss -i ./cssStyles/app.css -o ./wwwroot/app.css --watch
-from Client:  dotnet watch 
+from BlazorWebClient:  dotnet watch 
 
 
 
