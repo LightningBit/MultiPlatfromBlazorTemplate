@@ -1,4 +1,5 @@
 # MultiPlatfromBlazorTemplate.
+Preview live demo @ https://multiplatformblazordemo.azurewebsites.net/
 Multi Platform dotnet quick start template Featuring a sharable Razor Library based UI.
 This app Targets All Web Browsers, IOS, MacCatalyst, Android, Tzin, and Windows.
 Technologies used .netcore server, webassembly, and Maui blazor Hybrid.
