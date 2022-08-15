@@ -4,10 +4,12 @@ from SharedUI: npx tailwindcss -i ./cssStyles/app.css -o ./wwwroot/app.css --wat
 from BlazorWebClient:  dotnet watch 
 
 
+Install MudBlazor
+https://mudblazor.com/getting-started/installation#ready-for-more?
 
 
-
-
+Install Tailwind
+https://chrissainty.com/adding-tailwind-css-v3-to-a-blazor-app/
 
 
 Photo Attributes
