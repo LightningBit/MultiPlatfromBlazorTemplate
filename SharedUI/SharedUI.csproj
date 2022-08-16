@@ -22,19 +22,5 @@
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="cssStyles\" />
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="wwwroot\img\cookie.png" />
-    <Content Remove="wwwroot\img\favicon.ico" />
-    <Content Remove="wwwroot\img\index1.jpeg" />
-    <Content Remove="wwwroot\img\index2.jpeg" />
-    <Content Remove="wwwroot\img\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\img\cookie.png" />
-    <None Include="wwwroot\img\favicon.ico" />
-    <None Include="wwwroot\img\index1.jpeg" />
-    <None Include="wwwroot\img\index2.jpeg" />
   </ItemGroup>
 </Project>
