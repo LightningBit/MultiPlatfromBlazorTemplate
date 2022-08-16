@@ -29,6 +29,7 @@
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Shared\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\section1.jpeg" />
@@ -41,6 +42,10 @@
     <Content Remove="Shared\AppBar.razor" />
     <Content Remove="Shared\MainLayout.razor" />
     <Content Remove="Shared\NavMenu.razor" />
+    <Content Remove="wwwroot\img\cookie.png" />
+    <Content Remove="wwwroot\img\index1.jpeg" />
+    <Content Remove="wwwroot\img\index2.jpeg" />
+    <Content Remove="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
     <RazorComponent Include="Pages\Blog.razor" />
@@ -50,5 +55,10 @@
     <RazorComponent Include="Shared\AppBar.razor" />
     <RazorComponent Include="Shared\MainLayout.razor" />
     <RazorComponent Include="Shared\NavMenu.razor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\img\cookie.png" />
+    <None Include="wwwroot\img\index1.jpeg" />
+    <None Include="wwwroot\img\index2.jpeg" />
   </ItemGroup>
 </Project>
