@@ -48,21 +48,8 @@
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
-    <ItemGroup>
-      <None Remove="Pages\" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Pages\" />
-    </ItemGroup>
-    <ItemGroup>
+   <!-- <ItemGroup>
       <PackageReference Include="MudBlazor" Version="6.0.14" />
-    </ItemGroup>
-    <ItemGroup>
-      <RazorComponent Remove="Pages\About.razor" />
-      <RazorComponent Remove="Pages\Blogs.razor" />
-      <RazorComponent Remove="Pages\Contact.razor" />
-      <RazorComponent Remove="Pages\LogIn.razor" />
-      <RazorComponent Remove="Pages\Products.razor" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Pages\About.razor">
@@ -80,9 +67,8 @@
       <Content Include="Pages\Products.razor">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       </Content>
-    </ItemGroup>
+    </ItemGroup>-->
     <ItemGroup>
       <ProjectReference Include="..\SharedUI\SharedUI.csproj" />
-      <ProjectReference Include="..\BlazorWeb\Shared\BlazorWeb.Shared.csproj" />
     </ItemGroup>
 </Project>
